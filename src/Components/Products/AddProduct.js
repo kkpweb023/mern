@@ -4,6 +4,8 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 
+let link = `https://wild-puce-dove-hose.cyclic.app/add-Product` || `http://localhost:5000/add-Product`;
+
 const AddProduct = () => {
 
   let navigate = useNavigate();
@@ -29,7 +31,7 @@ function handleAdd() {
     return false;  
   }
 
-    axios.post('http://localhost:5000/add-Product', {
+    axios.post(link,{
       name: product.name,
       price: product.price,
       category: product.category,

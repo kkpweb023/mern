@@ -7,7 +7,8 @@ import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import { useNavigate } from 'react-router-dom';
 import { Audio } from 'react-loader-spinner';
 
-let link = "https://wild-puce-dove-hose.cyclic.app/list-Product" || 'http://localhost:5000/list-Product';
+let link = "https://wild-puce-dove-hose.cyclic.app" || 'http://localhost:5000';
+
 
 const ProductList = () => {
 
@@ -18,7 +19,7 @@ const ProductList = () => {
 
   const getProduct = () => {
     setLoading(true);
-    axios.get(link)
+    axios.get(`${link}/list-Product`)
       .then((result) => {
         setData(result.data)
         setLoading(false);
@@ -36,7 +37,7 @@ const ProductList = () => {
 
   function handleDelete(del) {
 
-    axios.delete(`http://localhost:5000/delete-Product/${del}`)
+    axios.delete(`${link}/delete-Product/${del}`)
       .then((result) => {
         if (result.data.deletedCount) {
           getProduct()
@@ -55,7 +56,7 @@ const ProductList = () => {
 
         if(key){
 
-          axios.get(`http://localhost:5000/search/${key}`)
+          axios.get(`${link}/search/${key}`)
           .then((result)=>setData(result.data))
           .catch((error)=>console.log("Search Failed"));
 

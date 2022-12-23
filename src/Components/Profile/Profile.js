@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import DelConfom from './DelConfom';
 import Pic from './UploadPic';
 
+let link = `https://wild-puce-dove-hose.cyclic.app` || `http://localhost:4000`;
 
 const Profile = () => {
 
@@ -17,7 +18,7 @@ const Profile = () => {
 
       const handleClose = () => {
 
-          axios.delete(`http://localhost:4000/${JSON.parse(user).email}`)
+          axios.delete(`${link}/${JSON.parse(user).email}`)
           .then((result)=>{
                 if(result.data.deletedCount){
                   setOpen(false);

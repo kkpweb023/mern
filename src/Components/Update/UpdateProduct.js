@@ -3,6 +3,8 @@ import './UpdateProduct.css';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 
+let link = `https://wild-puce-dove-hose.cyclic.app/update-Product` || `http://localhost:5000/update-Product`;
+
 const UpdateProduct = () => {
 
   let navigate = useNavigate();
@@ -16,7 +18,7 @@ const UpdateProduct = () => {
   });
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/update-Product/${params.id}`)
+    axios.get(`${link}/${params.id}`)
       .then((result) => {
         setProduct(result.data[0])
       })
@@ -26,7 +28,7 @@ const UpdateProduct = () => {
 
   function handleUpdate() {
 
-    axios.put(`http://localhost:5000/update-Product/${params.id}`, {
+    axios.put(`${link}/${params.id}`, {
 
       name: product.name,
       price: product.price,
