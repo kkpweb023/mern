@@ -7,6 +7,7 @@ import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import { useNavigate } from 'react-router-dom';
 import { Audio } from 'react-loader-spinner';
 
+let link = "https://wild-puce-dove-hose.cyclic.app/list-Product" || 'http://localhost:5000/list-Product';
 
 const ProductList = () => {
 
@@ -17,7 +18,7 @@ const ProductList = () => {
 
   const getProduct = () => {
     setLoading(true);
-    axios.get('http://localhost:5000/list-Product')
+    axios.get(link)
       .then((result) => {
         setData(result.data)
         setLoading(false);
