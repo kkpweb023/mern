@@ -1,0 +1,81 @@
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import './Login.css';
+import { Button } from '@mui/material';
+
+const Login = () => {
+
+    const navigate = useNavigate();
+    const [email, setEmail] = useState('');
+    const [pass, setPass] = useState('');
+
+    useEffect(()=>{
+        const auth = localStorage.getItem('user');
+        auth ? navigate('/') : navigate('/login');
+                
+    },[navigate])
+
+    function handleLogin() {
+
+        axios.post('https://wild-puce-dove-hose.cyclic.app/login',{
+            email: email,
+            password: pass
+        }).then((result) =>{
+
+            if(result.data.name){
+                localStorage.setItem('user',JSON.stringify(result.data));
+                navigate('/');
+            }else{
+
+                alert("Please Signup");
+                navigate('/signup');  
+            }
+
+        }).catch((error) => alert("! Login failed try again"));
+    }
+
+
+
+    function handlePass(){
+        navigate('/forgotPass');
+    }
+    
+
+    return (
+        <div className='Login'>
+
+            <h1>Login</h1>
+
+            <input type={'email'}
+                placeholder='Enter Email'
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+            />
+
+            <input type={'password'}
+                placeholder='Enter Password'
+                value={pass}
+                onChange={(e) => setPass(e.target.value)}
+            />
+
+            <Button color="secondary" size="small" 
+                    style={{ 
+                            fontSize:"11px",
+                            fontWeight:"bold",
+                            position:"relative",
+                            left:"15%",
+                            top:"20px"
+                        }}
+                        onClick={handlePass}
+                    >Forgot Password ?</Button>
+
+            <button
+                className='log_btn'
+                onClick={handleLogin}
+            >Login</button>
+
+        </div>
+    )
+}
+export default Login;

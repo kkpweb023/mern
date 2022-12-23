@@ -1,0 +1,14 @@
+.footer_div{
+    width: 100%;
+    margin-top:87.6vh;
+    
+
+}
+
+.footer_div >h2{
+    background-color: rgb(128, 212, 240); 
+    color: rgb(90, 43, 9);
+    text-align: center; 
+    padding:2px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
