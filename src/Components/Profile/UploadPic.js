@@ -4,6 +4,8 @@ import axios from 'axios';
 import './UploadPic.css';
 import removePic from '../../Images/picNOT.png';
 
+let link = `https://wild-puce-dove-hose.cyclic.app` || `http://localhost:4000`;
+
 const Pic = () => {
 
     const [image, setImage] = useState('');
@@ -18,7 +20,7 @@ const Pic = () => {
         .then((result)=>console.log("Upload Sucessfully"))
         .catch((error)=>console.log("! 404 upload failed")); */
 
-        axios.put(`http://localhost:4000/upload/${JSON.parse(user)._id}`, formData)
+        axios.put(`${link}/upload/${JSON.parse(user)._id}`, formData)
             .then((result) => alert("Upload Sucessfully"))
             .catch((error) => console.log("! 404 upload failed"));
 
@@ -27,14 +29,14 @@ const Pic = () => {
     }
 
     function handleRemove() {
-        axios.put(`http://localhost:4000/remove/${JSON.parse(user)._id}`, formData)
+        axios.put(`${link}/remove/${JSON.parse(user)._id}`, formData)
             .then((result) => alert("Remove Sucessfully"))
             .catch((error) => console.log("! 404 upload failed"));
         window.location.reload();
     }
 
     useEffect(() => {
-        axios.get(`http://localhost:4000/${JSON.parse(user)._id}`)
+        axios.get(`${link}/${JSON.parse(user)._id}`)
             .then((result) => setPic(result.data[0].image))
             .catch((error) => console.log("! 404 get failed"));
     }, [user])
@@ -42,7 +44,7 @@ const Pic = () => {
 
     return (
         <>
-            <img src={`http://localhost:4000/${pic}`} alt='' />
+            <img src={`${link}/${pic}`} alt='' />
 
             {pic ? <div className='remove' onClick={handleRemove}>X</div>
                 : <img src={removePic} alt='' />
