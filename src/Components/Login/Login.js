@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import './Login.css';
 import { Button } from '@mui/material';
 
+let link = 'https://wild-puce-dove-hose.cyclic.app/login' || 'http://localhost:4000/login';
+
+
 const Login = () => {
 
     const navigate = useNavigate();
@@ -18,7 +21,7 @@ const Login = () => {
 
     function handleLogin() {
 
-        axios.post('https://wild-puce-dove-hose.cyclic.app/login',{
+        axios.post(link,{
             email: email,
             password: pass
         }).then((result) =>{

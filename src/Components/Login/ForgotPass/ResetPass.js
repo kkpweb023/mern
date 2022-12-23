@@ -3,6 +3,8 @@ import './ResetPass.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 
+let link = `https://wild-puce-dove-hose.cyclic.app/forgotPass` || `http://localhost:4000/forgotPass`;
+
 const ResetPass = () => {
 
   const navigate = useNavigate();
@@ -13,7 +15,7 @@ const ResetPass = () => {
 
   function handleResetPass() {
 
-    axios.put(`http://localhost:4000/forgotPass/${params.id}`,{
+    axios.put(`${link}/${params.id}`,{
       password: pass
     })
       .then((result) =>{

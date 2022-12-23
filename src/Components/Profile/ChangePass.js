@@ -3,6 +3,8 @@ import './ChangePass.css';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
 
+let link = `https://wild-puce-dove-hose.cyclic.app/changePass` || `http://localhost:4000/changePass`;
+
 const ChangePass = () => {
 
     const navigate = useNavigate();
@@ -13,7 +15,7 @@ const ChangePass = () => {
     const user = localStorage.getItem('user');
 
     function handleChangePass(){
-            axios.put(`http://localhost:4000/changePass/${JSON.parse(user)._id}`,{
+            axios.put(`${link}/${JSON.parse(user)._id}`,{
                     password:pass
             })
             .then((result)=>{

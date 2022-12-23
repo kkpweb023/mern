@@ -3,6 +3,8 @@ import './ForgotPass.css';
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
 
+let link = `https://wild-puce-dove-hose.cyclic.app/getID` || `http://localhost:4000/getID`;
+
 
 const ForgotPass = () => {
 
@@ -13,7 +15,7 @@ const ForgotPass = () => {
     function handleForBtn(){
 
         if(email){
-            axios.get(`http://localhost:4000/getID/${email}`)
+            axios.get(`${link}/${email}`)
             .then((result)=>{
                 if(result.data === "Invalid Email Id"){
                     alert("! Invalid Email Id")
