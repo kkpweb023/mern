@@ -8,7 +8,7 @@ import './index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <BrowserRouter basename="/fullStack">
+      <BrowserRouter basename="/mern">
         <App />
       </BrowserRouter>
   </React.StrictMode>

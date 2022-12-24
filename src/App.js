@@ -23,7 +23,7 @@ const App = () => {
 
         <div style={{ position: "relative" }}>
             <NavBar />
-            <Routes basename="/fullStack">
+            <Routes basename="/mern">
                 <Route element={<PrivateComp />}>
                     <Route path='/' element={<ProductList />} />
                     <Route path='/add' element={<AddProduct />} />
