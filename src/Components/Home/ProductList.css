@@ -69,22 +69,15 @@
   
   @media (max-width: 780px) {
 
+    .search_box{
+        width:67%;
+        margin-left:14%;
+    }
 
-    
-  .search_box{
-
-
-    width:67%;
-    margin-left:14%;
-
-
-
-  }
-  
     .product-list-div > .table > .thead {
       display: none;
     }
-  
+
     .table tr {
       margin-bottom: 15px;
       display: block;
@@ -113,6 +106,27 @@
       background-color: rgb(89, 131, 148);
       color: white;
      
-    }
-    
+    }    
   }  
+
+
+
+  @media (max-width: 580px) {
+
+    .table tr {
+      width: 157%;
+      margin-left:-40px;
+    }
+
+    .table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width:30%;
+      padding-left:5px;
+      padding-top:3px;
+      font-size:18px;
+    }
+
+
+  }
