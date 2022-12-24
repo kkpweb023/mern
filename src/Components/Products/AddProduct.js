@@ -52,7 +52,7 @@ function handleAdd() {
 
     <div className='addProduct_div'>
 
-      <h1>Add Product</h1>
+      <h1 className='h1'>Add Product</h1>
 
       <input type={'text'}
         placeholder={'Enter product name'}

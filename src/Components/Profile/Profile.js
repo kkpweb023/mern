@@ -43,7 +43,7 @@ const Profile = () => {
 
   return (
     <>
-      <h1 style={{ padding: "20px 0px 0px 20px" }}>Profile Information</h1>
+      <h1 style={{ padding:"0px 0px 0px 20px",fontWeight:"bold"}}>Profile Information</h1>
 
       <div className='reg_num'><b>Registration No:</b> {id}</div>
 
@@ -56,7 +56,7 @@ const Profile = () => {
 
 
         <div className='Info_div'>
-          <h2 style={{ paddingBottom: "10px" }}><center>Personal Details</center></h2>
+          <h2 style={{ paddingBottom: "10px"}}><center>Personal Details</center></h2>
 
           <div><b>Name:</b> {JSON.parse(user).name}</div>
           <div><b>Email:</b> {JSON.parse(user).email}</div>

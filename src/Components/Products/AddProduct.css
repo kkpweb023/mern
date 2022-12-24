@@ -81,11 +81,18 @@
 
 @media(max-width:520px) {
 
+    .addProduct_div{
+        width:48%;
+        position: relative;
+        left:14%;
+    }
+
     .addProduct_div > input{
-        width:180%;
+        width:150%;
     }
 
     .addProduct_div > button{
         width:85%;
     }
+
 }  

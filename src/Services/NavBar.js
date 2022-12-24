@@ -21,15 +21,15 @@ const NavBar = () => {
 
   return (
 
-    <div>
+    <>
 
        <img src={logo} alt="logo" className='logo'/>
 
         {auth ? 
           <ul className='nav-link-ul'>
             <li><Link to='/' style={mystyle}>Products</Link></li>
-            <li><Link to='/add' style={mystyle}>Add Products</Link> </li>
-            <li><Link to='/profile' style={mystyle}>Profile</Link></li>
+            <li className='li_add'><Link to='/add' style={mystyle}>Add Products</Link> </li>
+            <li className='li_logout'><Link to='/profile' style={mystyle}>Profile</Link></li>
 
             <li><Link to='/login' 
                     onClick={UserLogout} 
@@ -45,7 +45,7 @@ const NavBar = () => {
           </ul>
         }
 
-    </div>
+    </>
   )
 }
 export default NavBar;

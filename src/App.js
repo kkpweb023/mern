@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import './App.css';
 
 import NavBar from './Services/NavBar';
 import ProductList from './Components/Home/ProductList';
@@ -20,7 +19,6 @@ import SixDigit from './Components/Login/ForgotPass/SixDigit';
 
 const App = () => {
     return (
-
         <div style={{ position: "relative" }}>
             <NavBar />
             <Routes basename="/mern">
@@ -40,10 +38,8 @@ const App = () => {
                 <Route path='/sixDigit/:id' element={<SixDigit />} />
                 <Route path='/resetPass/:id' element={<ResetPass />} />
 
-                 
             </Routes>
             <Footer />
-
         </div>
     )
 

@@ -70,7 +70,7 @@ const ProductList = () => {
 
     <div className='product-list-div'>
 
-      <h1>Product List</h1>
+      <h1 style={{fontWeight:"bold"}}>Product List</h1>
 
       <input type={'search'} 
               placeholder={'Search Product...'} 

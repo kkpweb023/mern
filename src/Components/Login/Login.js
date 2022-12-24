@@ -67,7 +67,7 @@ const Login = () => {
                             fontSize:"11px",
                             fontWeight:"bold",
                             position:"relative",
-                            left:"15%",
+                            left:"10%",
                             top:"20px"
                         }}
                         onClick={handlePass}

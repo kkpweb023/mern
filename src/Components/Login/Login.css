@@ -54,7 +54,7 @@
 @media(max-width:620px) {
 
     .Login{
-        left:10%;
+        left:20%;
         display: block;
     }
 
@@ -64,7 +64,7 @@
         margin-left:16%;
         padding:8px;
         font-size: 13px;
-        width: 180%;
+        width:180%;
     }
 
     .log_btn{
@@ -91,7 +91,7 @@
     .log_btn{
         position: relative;
         top:-20px;
-        left:90%;
+        left:85%;
     }
     
     
