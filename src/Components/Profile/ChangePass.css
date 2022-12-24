@@ -5,6 +5,7 @@
     top:15%;
     left:25%;
     display: block;
+    margin-top:50px;
     
 }
 
@@ -51,23 +52,21 @@
 @media(max-width:620px) {
 
     .ChangePass{
-
+        position: absolute;
+        top:15%;
         left:10%;
         display: block;
-        
     }
 
     .ChangePass > input{
-
         margin-top:16%;
         margin-bottom: 20px;
-        margin-left:16%;
+        margin-left:10%;
         padding:8px;
         font-size: 13px;
         width: 120%;
     }
-    
-
-
-    
+        
 }
+
+

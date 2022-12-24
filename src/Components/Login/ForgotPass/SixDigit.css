@@ -55,8 +55,6 @@
 }
 
 
-
-
 .Code_timer{
 
        color: red;
@@ -85,21 +83,12 @@
 
 
 
-
-
-
-
-
-
 @media(max-width:620px) {
-
-
 
     .SixDigit{
 
         left:10%;
         display: block;
-        
     }
 
     .SixDigit > input{
@@ -112,7 +101,37 @@
         width: 80%;
     }
     
+}
 
 
+
+
+@media(max-width:520px) {
+
+    .SixDigit > input{
+        margin-left:0%;
+        width: 72%;
+    }
+
+    .Code_timer{
+
+        position: relative;
+        top:-50px;
+        left:-40px;
+    }
+ 
+    .Resend_btn{
+        float:right;
+        position: relative;
+        top:-50px;
+        left:-15px;
+        font-size: small;
+    }
     
+
+    .code_btn{
+        margin-left:0%;
+        margin-top:10px;
+        width:70%;
+    }
 }
