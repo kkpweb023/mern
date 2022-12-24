@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import './Login.css';
 import { Button } from '@mui/material';
 
+
 let link = 'https://wild-puce-dove-hose.cyclic.app/login' || 'http://localhost:4000/login';
 
 
@@ -12,27 +13,31 @@ const Login = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
+    let [isLoading, setLoading] = useState(false);
 
-    useEffect(()=>{
+    useEffect(() => {
         const auth = localStorage.getItem('user');
         auth ? navigate('/') : navigate('/login');
-                
-    },[navigate])
+
+    }, [navigate])
 
     function handleLogin() {
 
-        axios.post(link,{
+        setLoading(true);
+
+        axios.post(link, {
             email: email,
             password: pass
-        }).then((result) =>{
+        }).then((result) => {
 
-            if(result.data.name){
-                localStorage.setItem('user',JSON.stringify(result.data));
+            if (result.data.name) {
+                localStorage.setItem('user', JSON.stringify(result.data));
+                setLoading(false);
                 navigate('/');
-            }else{
+            } else {
 
                 alert("Please Signup");
-                navigate('/signup');  
+                navigate('/signup');
             }
 
         }).catch((error) => alert("! Login failed try again"));
@@ -40,10 +45,10 @@ const Login = () => {
 
 
 
-    function handlePass(){
+    function handlePass() {
         navigate('/forgotPass');
     }
-    
+
 
     return (
         <div className='Login'>
@@ -62,22 +67,25 @@ const Login = () => {
                 onChange={(e) => setPass(e.target.value)}
             />
 
-            <Button color="secondary" size="small" 
-                    style={{ 
-                            fontSize:"11px",
-                            fontWeight:"bold",
-                            position:"relative",
-                            left:"10%",
-                            top:"20px"
-                        }}
-                        onClick={handlePass}
-                    >Forgot Password ?</Button>
-
-            <button
-                className='log_btn'
-                onClick={handleLogin}
-            >Login</button>
-
+            <Button color="secondary" size="small"
+                style={{
+                    fontSize: "11px",
+                    fontWeight: "bold",
+                    position: "relative",
+                    left: "10%",
+                    top: "20px"
+                }}
+                onClick={handlePass}
+            >Forgot Password ?</Button>
+            
+                <button
+                    className='log_btn'
+                    onClick={handleLogin}
+                >
+                { isLoading ? 
+                    <span><i className="fa fa-refresh fa-spin fa-fw"></i></span>
+                    :""
+                } Login </button>
         </div>
     )
 }

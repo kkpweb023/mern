@@ -30,13 +30,15 @@
 
     background-color: skyblue;
     color: black;
-    padding:8px 25%;
+    box-sizing: border-box;
+    padding:5px 27px;
     cursor: pointer;
     border: 1px solid black;
     outline: none;
-    position: relative;
-    top:-20px;
-    left: 150%;
+    position: absolute;
+    top:210px;
+    left:155%;
+    display: flex;
 }
 
 .log_btn:hover{
