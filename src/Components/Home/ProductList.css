@@ -115,7 +115,7 @@
 
     .table tr {
       width: 157%;
-      margin-left:-40px;
+      margin-left:-48px;
     }
 
     .table td::before {
@@ -127,6 +127,4 @@
       padding-top:3px;
       font-size:18px;
     }
-
-
   }

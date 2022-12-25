@@ -80,8 +80,8 @@ const ProductList = () => {
 
       {isLoading ?
         <Audio
-          height="374"
-          width="150"
+          height="232"
+          width="140"
           ariaLabel="progress-bar-loading"
           wrapperStyle={{}}
           wrapperClass="progress-bar-wrapper"
