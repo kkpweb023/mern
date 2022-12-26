@@ -12,7 +12,7 @@ const Pic = () => {
     const [pic, setPic] = useState([]);
     const user = localStorage.getItem('user');
     const formData = new FormData()
-    formData.append('user-image', image)
+    formData.append('photo', image)
 
     function handleClick() {
 
@@ -44,7 +44,7 @@ const Pic = () => {
 
     return (
         <>
-            <img src={`${link}/${pic}`} alt='' />
+            <img src={pic} alt='' />
 
             {pic ? <div className='remove' onClick={handleRemove}>X</div>
                 : <img src={removePic} alt='' />
