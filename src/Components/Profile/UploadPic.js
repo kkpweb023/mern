@@ -37,7 +37,9 @@ const Pic = () => {
 
     useEffect(() => {
         axios.get(`${link}/${JSON.parse(user)._id}`)
-            .then((result) => setPic(result.data[0].image))
+            .then((result) => { setPic(result.data[0].image)
+                                 console.log(result)
+                                })
             .catch((error) => console.log("! 404 get failed"));
     }, [user])
 
