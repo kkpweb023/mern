@@ -1,100 +1,81 @@
-.Login{
-
-    font-family: Arial, Helvetica, sans-serif;
-    position: absolute;
-    top:15%;
-    left:25%;
-    display: block;
-    
+.Login {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  display: block;
 }
 
-.Login >input{
+.Login > input {
+  display: block;
+  margin-top: 14%;
+  margin-left: 18%;
+  outline: none;
+  border: 1px solid skyblue;
+  padding: 8px;
+  font-size: 13px;
+  width: 150%;
+}
 
+.Login > input:focus {
+  border: 2px solid rgb(19, 128, 172);
+}
+
+.log_btn {
+  background-color: skyblue;
+  color: black;
+  box-sizing: border-box;
+  padding: 5px 27px;
+  cursor: pointer;
+  border: 1px solid black;
+  outline: none;
+  position: absolute;
+  top: 310px;
+  left: 122%;
+  display: flex;
+}
+
+.log_btn:hover {
+  background-color: rgb(229, 232, 233);
+  color: rgb(9, 108, 138);
+  border: 2px solid skyblue;
+}
+
+@media (max-width: 670px) {
+  .Login {
+    left: 10%;
     display: block;
-    margin-top:16%;
+  }
+
+  .Login > input {
+    margin-top: 16%;
     margin-bottom: 20px;
-    margin-left:18%;
-    outline: none;
-    border: 1px solid skyblue;
-    padding:8px;
+    margin-left: 20%;
+    padding: 8px;
     font-size: 13px;
-    width: 200%;
+    width: 150%;
+  }
+
+  .log_btn {
+    position: relative;
+    top: -20px;
+    left: 130%;
+  }
 }
 
-.Login >input:focus{
-    border: 2px solid rgb(19, 128, 172);
-}
+@media (max-width: 540px) {
+  .Login {
+    left: 5%;
+  }
 
+  .Login > input {
+    margin-left: 5%;
+    width: 135%;
+  }
 
-.log_btn{
-
-    background-color: skyblue;
-    color: black;
-    box-sizing: border-box;
-    padding:5px 27px;
-    cursor: pointer;
-    border: 1px solid black;
-    outline: none;
-    position: absolute;
-    top:210px;
-    left:155%;
-    display: flex;
-}
-
-.log_btn:hover{
-
-    background-color: rgb(229, 232, 233);
-    color: rgb(9, 108, 138);
-    border: 2px solid skyblue;
-}
-
-
-
-
-
-
-@media(max-width:620px) {
-
-    .Login{
-        left:20%;
-        display: block;
-    }
-
-    .Login >input{
-        margin-top:16%;
-        margin-bottom: 20px;
-        margin-left:16%;
-        padding:8px;
-        font-size: 13px;
-        width:180%;
-    }
-
-    .log_btn{
-        position: relative;
-        top:-20px;
-        left: 130%;
-    }
-    
-    
-}
-
-
-@media(max-width:500px) {
-
-    .Login{
-        left:5%;
-    }
-
-    .Login >input{
-        margin-left:5%;
-        width: 150%;
-    }
-
-    .log_btn{
-        position: relative;
-        top:-20px;
-        left:92%;
-    }
-    
-    
+  .log_btn {
+    position: relative;
+    top: -20px;
+    left: 100%;
+  }
 }
