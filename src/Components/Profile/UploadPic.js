@@ -16,10 +16,6 @@ const Pic = () => {
 
     function handleClick() {
 
-        /* axios.post('http://localhost:4000/uploadImg',formData)
-        .then((result)=>console.log("Upload Sucessfully"))
-        .catch((error)=>console.log("! 404 upload failed")); */
-
         axios.put(`${link}/upload/${JSON.parse(user)._id}`, formData)
             .then((result) => alert("Upload Sucessfully"))
             .catch((error) => console.log("! 404 upload failed"));
@@ -44,8 +40,6 @@ const Pic = () => {
     }, [user])
 
     
-
-
     return (
         <>
             <img src={`${link}/${pic}`} alt='' />
