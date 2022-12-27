@@ -38,15 +38,17 @@ const Pic = () => {
     useEffect(() => {
         axios.get(`${link}/${JSON.parse(user)._id}`)
             .then((result) => { setPic(result.data[0].image)
-                                 console.log(result)
+                                 console.log(result.data[0].image)
                                 })
             .catch((error) => console.log("! 404 get failed"));
     }, [user])
 
+    
+
 
     return (
         <>
-            <img src={pic} alt='' />
+            <img src={`${link}/${pic}`} alt='' />
 
             {pic ? <div className='remove' onClick={handleRemove}>X</div>
                 : <img src={removePic} alt='' />
