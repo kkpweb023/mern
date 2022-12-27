@@ -7,7 +7,7 @@ import DelConfom from './DelConfom';
 import Pic from './UploadPic';
 
 
-let link = `https://wild-puce-dove-hose.cyclic.app` || `http://localhost:4000`;
+let link = `https://wild-puce-dove-hose.cyclic.app` /*|| `http://localhost:4000`*/;
 
 const Profile = () => {
 

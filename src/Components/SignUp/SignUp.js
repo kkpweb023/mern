@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 import RegNo from './RegNo';
 
-let link = 'https://wild-puce-dove-hose.cyclic.app/register' || 'http://localhost:4000/register';
+let link = 'https://wild-puce-dove-hose.cyclic.app/register' /*|| 'http://localhost:4000/register'*/;
 
 
 

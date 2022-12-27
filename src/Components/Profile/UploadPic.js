@@ -51,6 +51,7 @@ const Pic = () => {
                 type={'file'}
                 accept='image/*'
                 id={'file'}
+                name="photo"
                 onChange={(e) => setImage(e.target.files[0])}
                 style={{ display: "none" }}
             />
