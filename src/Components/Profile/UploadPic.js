@@ -4,7 +4,7 @@ import axios from 'axios';
 import './UploadPic.css';
 import removePic from '../../Images/picNOT.png';
 
-let link = /*`https://wild-puce-dove-hose.cyclic.app` &&*/ `http://localhost:4000`;
+let link = `https://wild-puce-dove-hose.cyclic.app` && `http://localhost:4000`;
 
 const Pic = () => {
 
@@ -42,7 +42,7 @@ const Pic = () => {
     
     return (
         <>
-            <img src={`${link}/${pic}`} alt='' />
+            <img src={pic} alt='' />
 
             {pic ? <div className='remove' onClick={handleRemove}>X</div>
                 : <img src={removePic} alt='' />
