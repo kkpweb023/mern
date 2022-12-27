@@ -44,7 +44,7 @@ const Pic = () => {
 
     return (
         <>
-            <img src={`${link}/${pic}`} alt='' />
+            <img src={pic} alt='' />
 
             {pic ? <div className='remove' onClick={handleRemove}>X</div>
                 : <img src={removePic} alt='' />
