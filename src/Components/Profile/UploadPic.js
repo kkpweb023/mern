@@ -16,7 +16,7 @@ const Pic = () => {
 
     function handleClick() {
 
-        axios.put(`/upload/${JSON.parse(user)._id}`, formData)
+        axios.put(`${link}/upload/${JSON.parse(user)._id}`, formData)
             .then((result) => console.log(result))
             .catch((error) => console.log("! 404 upload failed"));
 
@@ -25,16 +25,16 @@ const Pic = () => {
     }
 
     function handleRemove() {
-        axios.put(`/remove/${JSON.parse(user)._id}`, formData)
+        axios.put(`${link}/remove/${JSON.parse(user)._id}`, formData)
             .then((result) => alert("Remove Sucessfully"))
             .catch((error) => console.log("! 404 upload failed"));
         window.location.reload();
     }
 
     useEffect(() => {
-        axios.get(`/${JSON.parse(user)._id}`)
+        axios.get(`${link}/${JSON.parse(user)._id}`)
             .then((result) => { setPic(result.data[0].image)
-                                 console.log(result.data)
+                                 console.log(result.data[0])
                                 })
             .catch((error) => console.log("! 404 get failed"));
     }, [user])

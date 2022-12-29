@@ -19,7 +19,7 @@ const ProductList = () => {
 
   const getProduct = () => {
     setLoading(true);
-    axios.get(`/list-Product`)
+    axios.get(`${link}/list-Product`)
       .then((result) => {
         setData(result.data)
         setLoading(false);
@@ -37,7 +37,7 @@ const ProductList = () => {
 
   function handleDelete(del) {
 
-    axios.delete(`/delete-Product/${del}`)
+    axios.delete(`${link}/delete-Product/${del}`)
       .then((result) => {
         if (result.data.deletedCount) {
           getProduct()
@@ -56,7 +56,7 @@ const ProductList = () => {
 
         if(key){
 
-          axios.get(`/search/${key}`)
+          axios.get(`${link}/search/${key}`)
           .then((result)=>setData(result.data))
           .catch((error)=>console.log("Search Failed"));
 
