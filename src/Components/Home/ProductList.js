@@ -37,7 +37,7 @@ const ProductList = () => {
 
   function handleDelete(del) {
 
-    axios.delete(`${link}/delete-Product/${del}`)
+    axios.delete(`/delete-Product/${del}`)
       .then((result) => {
         if (result.data.deletedCount) {
           getProduct()
@@ -56,7 +56,7 @@ const ProductList = () => {
 
         if(key){
 
-          axios.get(`${link}/search/${key}`)
+          axios.get(`/search/${key}`)
           .then((result)=>setData(result.data))
           .catch((error)=>console.log("Search Failed"));
 

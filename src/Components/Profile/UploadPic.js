@@ -25,7 +25,7 @@ const Pic = () => {
     }
 
     function handleRemove() {
-        axios.put(`${link}/remove/${JSON.parse(user)._id}`, formData)
+        axios.put(`/remove/${JSON.parse(user)._id}`, formData)
             .then((result) => alert("Remove Sucessfully"))
             .catch((error) => console.log("! 404 upload failed"));
         window.location.reload();
