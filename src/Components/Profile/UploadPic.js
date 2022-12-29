@@ -16,7 +16,7 @@ const Pic = () => {
 
     function handleClick() {
 
-        axios.put(`${link}/upload/${JSON.parse(user)._id}`, formData)
+        axios.put(`/upload/${JSON.parse(user)._id}`, formData)
             .then((result) => console.log(result))
             .catch((error) => console.log("! 404 upload failed"));
 
@@ -32,9 +32,9 @@ const Pic = () => {
     }
 
     useEffect(() => {
-        axios.get(`${link}/${JSON.parse(user)._id}`)
+        axios.get(`/${JSON.parse(user)._id}`)
             .then((result) => { setPic(result.data[0].image)
-                                 console.log(result.data[0])
+                                 console.log(result.data)
                                 })
             .catch((error) => console.log("! 404 get failed"));
     }, [user])

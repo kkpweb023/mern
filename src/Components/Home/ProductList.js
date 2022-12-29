@@ -19,7 +19,7 @@ const ProductList = () => {
 
   const getProduct = () => {
     setLoading(true);
-    axios.get(`${link}/list-Product`)
+    axios.get(`/list-Product`)
       .then((result) => {
         setData(result.data)
         setLoading(false);
