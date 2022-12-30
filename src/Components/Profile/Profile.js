@@ -4,7 +4,7 @@ import { Button } from '@mui/material';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'
 import DelConfom from './DelConfom';
-import Pic from './UploadPic';
+//import Pic from './UploadPic';
 
 
 let link = `https://wild-puce-dove-hose.cyclic.app` /*|| `http://localhost:4000`*/;
@@ -51,9 +51,10 @@ const Profile = () => {
       <hr />
       <div className='Personal_info'>
 
-        <div className='photoPic_div'>
-          <Pic />
-        </div>
+            {/* <div className='photoPic_div'>
+                <Pic />
+              </div>
+          */}
 
 
         <div className='Info_div'>
