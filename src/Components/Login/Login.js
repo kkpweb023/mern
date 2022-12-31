@@ -6,7 +6,7 @@ import { Button } from '@mui/material';
 import Random from './Random/Random';
 
 
-let link = /*'https://wild-puce-dove-hose.cyclic.app/login' ||*/ 'http://localhost:4000/login';
+let link = 'https://wild-puce-dove-hose.cyclic.app/login' /*|| 'http://localhost:4000/login'*/;
 
 
 const Login = () => {

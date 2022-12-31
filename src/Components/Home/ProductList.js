@@ -7,7 +7,7 @@ import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import { useNavigate } from 'react-router-dom';
 import { Audio } from 'react-loader-spinner';
 
-let link = /*"https://wild-puce-dove-hose.cyclic.app" ||*/ 'http://localhost:4000';
+let link = "https://wild-puce-dove-hose.cyclic.app" /*|| 'http://localhost:4000'*/;
 
 
 const ProductList = () => {
