@@ -15,11 +15,7 @@ const ForgotPass = () => {
     function handleForBtn(){
 
         if(email){
-            axios.get(`${link}/${email}`,{
-                headers:{
-                  authorization:`bearer ${JSON.parse(localStorage.getItem('token'))}`
-                }
-              })
+            axios.get(`${link}/${email}`)
             .then((result)=>{
                 if(result.data === "Invalid Email Id"){
                     alert("! Invalid Email Id")
