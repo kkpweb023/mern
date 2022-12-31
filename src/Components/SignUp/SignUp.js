@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 import RegNo from './RegNo';
 
-let link = 'https://wild-puce-dove-hose.cyclic.app/register' /*|| 'http://localhost:4000/register'*/;
+let link = /*'https://wild-puce-dove-hose.cyclic.app/register' ||*/ 'http://localhost:4000/register';
 
 
 
@@ -42,9 +42,10 @@ const SignUp = () => {
             image:""
 
         }).then((result) => {
-            if(result.data.email){
-                localStorage.setItem('user',JSON.stringify(result.data));
-                setId(result.data._id);
+            if(result.data.auth){
+                localStorage.setItem('user',JSON.stringify(result.data.user));
+                localStorage.setItem('token',JSON.stringify(result.data.auth));
+                setId(result.data.user._id);
                 setOpen(true);     
             }else{
                 alert("Email Already Registered");

@@ -3,7 +3,7 @@ import './UpdateProduct.css';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 
-let link = `https://wild-puce-dove-hose.cyclic.app/update-Product` /*|| `http://localhost:4000/update-Product`*/;
+let link = /*`https://wild-puce-dove-hose.cyclic.app/update-Product` ||*/ `http://localhost:4000/update-Product`;
 
 const UpdateProduct = () => {
 
@@ -18,7 +18,11 @@ const UpdateProduct = () => {
   });
 
   useEffect(() => {
-    axios.get(`${link}/${params.id}`)
+    axios.get(`${link}/${params.id}`,{
+      headers:{
+        authorization:`bearer ${JSON.parse(localStorage.getItem('token'))}`
+      }
+    })
       .then((result) => {
         setProduct(result.data[0])
       })
@@ -28,13 +32,17 @@ const UpdateProduct = () => {
 
   function handleUpdate() {
 
-    axios.put(`${link}/${params.id}`, {
+    axios.put(`${link}/${params.id}`,{
 
       name: product.name,
       price: product.price,
       category: product.category,
       company: product.company
 
+    },{
+      headers:{
+        authorization:`bearer ${JSON.parse(localStorage.getItem('token'))}`
+      }
     }).then((result) => {
 
       if (result.data.modifiedCount === 1) {

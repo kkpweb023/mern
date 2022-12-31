@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 
-let link = `https://wild-puce-dove-hose.cyclic.app/add-Product` /*|| `http://localhost:4000/add-Product`*/;
+let link = /*`https://wild-puce-dove-hose.cyclic.app/add-Product` ||*/ `http://localhost:4000/add-Product`;
 
 const AddProduct = () => {
 
@@ -38,6 +38,10 @@ function handleAdd() {
       company: product.company,
       userId: JSON.parse(userId)._id,
 
+    },{
+      headers:{
+        authorization:`bearer ${JSON.parse(localStorage.getItem('token'))}`
+      }
     })
     .then((result)=>console.log(result.data))
     .catch((error)=>console.log("! data add failed"));

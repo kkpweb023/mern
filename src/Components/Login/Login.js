@@ -6,7 +6,7 @@ import { Button } from '@mui/material';
 import Random from './Random/Random';
 
 
-let link = 'https://wild-puce-dove-hose.cyclic.app/login' /*|| 'http://localhost:4000/login'*/;
+let link = /*'https://wild-puce-dove-hose.cyclic.app/login' ||*/ 'http://localhost:4000/login';
 
 
 const Login = () => {
@@ -39,8 +39,9 @@ const Login = () => {
                 password: pass
             }).then((result) => {
                 setLoading(false);
-                if (result.data.name) {
-                    localStorage.setItem('user', JSON.stringify(result.data));
+                if(result.data.auth){
+                    localStorage.setItem('user', JSON.stringify(result.data.user));
+                    localStorage.setItem('token', JSON.stringify(result.data.auth));
                     navigate('/');
                 } else {
                     alert("Please Enter correct email id and password");
