@@ -79,3 +79,21 @@
     left: 100%;
   }
 }
+
+
+@media (max-width: 440px) {
+  .Login {
+    left:3%;
+  }
+
+  .Login > input {
+    margin-left: 4%;
+    width: 110%;
+  }
+
+  .log_btn {
+    position: relative;
+    top: -20px;
+    left:80%;
+  }
+}

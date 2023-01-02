@@ -74,3 +74,20 @@
     bottom: 42px;
   }
 }
+
+@media (max-width: 440px) {
+  .random_div > label {
+    margin-left:2%;
+    width: 113%;
+  }
+
+  .captcha {
+    position: relative;
+    right: -114%;
+    bottom: 42px;
+  }
+
+  .alpha_Num {
+    padding: 6px 0px 0px 15px;
+  }  
+}
