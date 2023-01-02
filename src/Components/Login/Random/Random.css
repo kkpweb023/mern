@@ -78,12 +78,12 @@
 @media (max-width: 440px) {
   .random_div > label {
     margin-left:2%;
-    width: 113%;
+    width: 103%;
   }
 
   .captcha {
     position: relative;
-    right: -114%;
+    right: -104%;
     bottom: 42px;
   }
 
