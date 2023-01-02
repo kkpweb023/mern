@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import './Login.css';
 import { Button } from '@mui/material';
 import Random from './Random/Random';
-
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 let link = 'https://wild-puce-dove-hose.cyclic.app/login' /*|| 'http://localhost:4000/login'*/;
 
@@ -13,12 +14,26 @@ const Login = () => {
 
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
+
     const [pass, setPass] = useState('');
+
+    const [type,setType] = useState('password');
+    const [icon,setIcon] = useState(<VisibilityOffIcon />);
+
     let [isLoading, setLoading] = useState(false);
 
     const [aplhNum, setaplhNum] = useState("");
     const [num, setNum] = useState("SD5T76");
 
+    function handleIcon(){
+          if(type === 'password'){  
+            setType('text');
+            setIcon(<VisibilityIcon />);
+        }else{
+            setType('password');
+            setIcon(<VisibilityOffIcon />)
+        }
+    }
 
     useEffect(() => {
         const auth = localStorage.getItem('user');
@@ -66,11 +81,16 @@ const Login = () => {
                 onChange={(e) => setEmail(e.target.value)}
             />
 
-            <input type={'password'}
+            <input type={type}
                 placeholder='Enter Password'
                 value={pass}
                 onChange={(e) => setPass(e.target.value)}
             />
+            <span className="Visible_icon" onClick={handleIcon}>{icon}</span>
+
+           
+
+            
 
             <Random aplhNum={aplhNum} setaplhNum={setaplhNum} num={num} setNum={setNum} />
 

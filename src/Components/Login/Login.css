@@ -41,6 +41,13 @@
   border: 2px solid skyblue;
 }
 
+.Visible_icon {
+  position: absolute;
+  left: 405px;
+  bottom: 133px;
+  color: rgb(11, 129, 184);
+}
+
 @media (max-width: 670px) {
   .Login {
     left: 10%;
@@ -61,6 +68,12 @@
     top: -20px;
     left: 130%;
   }
+
+  .Visible_icon {
+    position: absolute;
+    left: 405px;
+    bottom: 195px;
+  }
 }
 
 @media (max-width: 540px) {
@@ -78,22 +91,33 @@
     top: -20px;
     left: 100%;
   }
-}
 
+  .Visible_icon {
+    position: absolute;
+    left: 335px;
+    bottom: 195px;
+  }
+}
 
 @media (max-width: 440px) {
   .Login {
-    left:6%;
+    left: 6%;
   }
 
   .Login > input {
-    margin-left:4%;
+    margin-left: 4%;
     width: 100%;
   }
 
   .log_btn {
     position: relative;
     top: -20px;
-    left:75%;
+    left: 75%;
+  }
+
+  .Visible_icon {
+    position: absolute;
+    left: 235px;
+    bottom: 195px;
   }
 }
