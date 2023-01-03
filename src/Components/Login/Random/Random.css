@@ -35,8 +35,8 @@
 
 .captcha {
   position: absolute;
-  right: -84%;
-  bottom: 50px;
+  right: -78%;
+  bottom: 46px;
   font-size: 30px;
   cursor: pointer;
 }
@@ -88,6 +88,7 @@
   }
 
   .alpha_Num {
-    padding: 6px 0px 0px 15px;
+    padding: 6px 0px 0px 10px;
+    font-size: 12px;
   }  
 }

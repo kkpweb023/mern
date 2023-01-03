@@ -23,7 +23,7 @@ const Random = (props) => {
 
             <span className='captcha'>
                 <AutorenewIcon
-                    sx={{ fontSize: 35 }}
+                    sx={{ fontSize: 25}}
                     color={"primary"}
                     className="Icon"
                     onClick={handleCaptcha}
