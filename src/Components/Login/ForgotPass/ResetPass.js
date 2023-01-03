@@ -22,6 +22,8 @@ const ResetPass = () => {
         if (result.data.modifiedCount === 1) {
           alert("Password Reset successfully");
           navigate('/login');
+        }else if(result.data.modifiedCount === 0){
+          alert("This is exiting password");
         }
       })
       .catch((error) => console.log("! update failed"));
