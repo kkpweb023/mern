@@ -78,3 +78,18 @@
     width: 72%;
   }
 }
+
+
+
+
+
+@media (max-width: 470px) {
+  
+  .updateProduct_div > :first-child {
+    width: 200px;
+  }
+
+  .updateProduct_div > button {
+    width:100%;
+  }
+}

@@ -3,7 +3,7 @@ import './UpdateProduct.css';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 
-let link = /*`https://wild-puce-dove-hose.cyclic.app/update-Product` ||*/ `http://localhost:4000/update-Product`;
+let link = `https://wild-puce-dove-hose.cyclic.app/update-Product`/*||`http://localhost:4000/update-Product`*/;
 
 const UpdateProduct = () => {
 
