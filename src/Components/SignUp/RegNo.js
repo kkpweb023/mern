@@ -11,16 +11,19 @@ const RegNo = ({id,handleClose,open}) => {
         <div>
             <Dialog
                 open={open}
-                onClose={handleClose}
                 aria-labelledby="alert-dialog-title"
-                aria-describedby="alert-dialog-description"
+                aria-describedby="alert-dialog-description"    
             >
+            
                 <DialogTitle id="alert-dialog-title">
                     {"Your Registration Number"}
                 </DialogTitle>
 
                 <DialogContent>
-                    <DialogContentText id="alert-dialog-description">
+                    <DialogContentText id="alert-dialog-description" 
+                           style={{fontWeight:"bold",letterSpacing:"9px",fontSize:"35px"}} 
+                           color={'darkgreen'}
+                    >
                         {id}
                     </DialogContentText>
                 </DialogContent>
