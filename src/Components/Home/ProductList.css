@@ -53,7 +53,7 @@
 }
 
 .search_box:focus {
-  border: 2px solid rgb(11, 108, 146);
+  border: 1px solid rgb(25, 9, 238);
   font-weight: bold;
 }
 
