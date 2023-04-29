@@ -5,7 +5,7 @@ module.exports = app => {
     app.use(
             createProxyMiddleware('/endpoint',
                         { 
-                            target: 'https://wild-puce-dove-hose.cyclic.app', 
+                            target: 'https://cyan-encouraging-chiton.cyclic.app', 
                             changeOrigin: true 
                         })
     )      
