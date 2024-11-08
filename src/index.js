@@ -9,7 +9,7 @@ import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/mern">
+    <BrowserRouter future={{ v7_startTransition: true,v7_relativeSplatPath: true,}}  basename="/mern">
       <App />
     </BrowserRouter>
   </React.StrictMode>
