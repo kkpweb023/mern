@@ -9,7 +9,7 @@ import { Audio } from 'react-loader-spinner';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 
-let link ='http://localhost:4000';
+let link = "https://merndatabase-production.up.railway.app" /*|| 'http://localhost:4000'*/;
 
 
 const ProductList = () => {

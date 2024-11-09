@@ -3,7 +3,8 @@ import './UpdateProduct.css';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 
-let link = `http://localhost:4000/update-Product`;
+let link = "https://merndatabase-production.up.railway.app/update-Product" /*|| 'http://localhost:4000/update-Product'*/
+
 
 const UpdateProduct = () => {
 

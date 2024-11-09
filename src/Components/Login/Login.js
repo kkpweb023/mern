@@ -8,7 +8,8 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import PersonIcon from '@mui/icons-material/Person';
 
-let link = 'http://localhost:4000/login';
+
+let link = "https://merndatabase-production.up.railway.app/login" /*|| 'http://localhost:4000/login'*/
 
 
 const Login = () => {

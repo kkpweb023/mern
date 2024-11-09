@@ -7,7 +7,7 @@ import DelConfom from './DelConfom';
 //import Pic from './UploadPic';
 
 
-let link = `http://localhost:4000`;
+let link = "https://merndatabase-production.up.railway.app" /*|| 'http://localhost:4000'*/
 
 const Profile = () => {
 

@@ -3,7 +3,7 @@ import './ChangePass.css';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
 
-let link = `http://localhost:4000/changePass`;
+let link = "https://merndatabase-production.up.railway.app/changePass" /*|| 'http://localhost:4000/changePass'*/
 
 const ChangePass = () => {
 

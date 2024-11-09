@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 
-let link =  `http://localhost:4000/add-Product`;
+let link = "https://merndatabase-production.up.railway.app/add-Product" /*|| 'http://localhost:4000/add-Product'*/
 
 const AddProduct = () => {
 

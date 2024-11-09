@@ -3,6 +3,7 @@
   "homepage": " https://kkpweb023.github.io/mern/",
   "version": "0.1.0",
   "private": true,
+  "proxy":"https://merndatabase-production.up.railway.app/",
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
